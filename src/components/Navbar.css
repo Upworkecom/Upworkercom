@@ -163,3 +163,7 @@
       transition: 250ms;
     }
   }
+
+@media  screen and (min-width:770px) {
+  
+}
