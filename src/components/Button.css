@@ -1,53 +1,65 @@
-:root {
-    --primary: #fff;
-  }
-  
-  .btn {
-    padding: 8px 20px;
-    border-radius: 2px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .btn--primary {
-    background-color: var(--primary);
-    color: #242424;
-    border: 1px solid var(--primary);
-  }
-  
-  .btn--outline {
-    background-color: transparent;
-    color: #fff;
-    padding: 8px 20px;
-    border: 1px solid var(--primary);
-    transition: all 0.3s ease-out;
-  }
-  
-  .btn--medium {
-    padding: 8px 10px;
-    margin-right: 10px;
-    font-size: 15px;
-  }
-  
-  .btn--large {
-    padding: 12px 26px;
-    font-size: 20px;
-  }
-  
-  .btn--large:hover,
-  .btn--medium:hover {
-    transition: all 0.3s ease-out;
-    background: #fff;
-    color: #242424;
-    transition: 250ms;
-  }
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
 
-  /* iPads (portrait and landscape) ----------- */
+:root {
+  --primary: #fff;
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: var(--primary);
+  color: #242424;
+  border: 1px solid var(--primary);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: #fff;
+  padding: 8px 20px;
+  border: 1px solid var(--primary);
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.btn--medium {
+  padding: 8px 10px;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.btn--large {
+  padding: 12px 26px;
+  font-size: 20px;
+}
+
+.btn--large:hover,
+.btn--medium:hover {
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background: #fff;
+  color: #242424;
+  -webkit-transition: 250ms;
+  -o-transition: 250ms;
+  transition: 250ms;
+}
+
+/* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-  .btn--medium{
-    font-size: 5px;
-    padding: 5px 10px;
-  }
-  }
-  
+.btn--medium{
+  font-size: 5px;
+  padding: 5px 10px;
+}
+}
