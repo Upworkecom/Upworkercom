@@ -1,62 +1,32 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 4 version
-*/
-
 .navbar {
-  /* background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%); */
-  background: transparent;
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   height: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-size: 1.2rem;
   position: sticky;
   top: 0;
   z-index: 999;
 }
-.navbar.active{
-background: -webkit-gradient(linear, left top, right top, from(rgb(28, 27, 27)), to(rgb(26, 23, 23)));
-background: -o-linear-gradient(left, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-}
 
 .navbar-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 80px;
   max-width: 1500px;
 }
 
 .navbar-logo {
   color: #fff;
-  -ms-grid-column-align: start;
-      justify-self: start;
+  justify-self: start;
   margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .fa-typo3 {
@@ -65,17 +35,13 @@ background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
 }
 
 .nav-menu {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 10px auto 10px auto 10px auto;
   grid-template-columns: repeat(4, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;
   width: 60vw;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  justify-content: end;
   margin-right: 2rem;
 }
 
@@ -85,12 +51,8 @@ background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
 
 .nav-links {
   color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
@@ -98,8 +60,6 @@ background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
 
 .nav-links:hover {
   border-bottom: 4px solid #fff;
-  -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 
@@ -115,32 +75,20 @@ background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   display: none;
 }
 
-@media screen and (max-width: 760px) {
-  .navbar{
-    background:-webkit-gradient(linear, left top, right top, from(rgb(28, 27, 27)), to(rgb(26, 23, 23))) ;
-    background:-o-linear-gradient(left, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%) ;
-    background:linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%) ;
-  }
+@media screen and (max-width: 960px) {
   .NavbarItems {
     position: relative;
   }
 
   .nav-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     width: 100%;
-    height: 50vh;
+    height: 90vh;
     position: absolute;
     top: 80px;
     left: -100%;
     opacity: 1;
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
 
@@ -148,8 +96,6 @@ background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
     background: #242222;
     left: 0;
     opacity: 1;
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     z-index: 1;
   }
@@ -171,9 +117,7 @@ background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-transform: translate(25%, 50%);
-        -ms-transform: translate(25%, 50%);
-            transform: translate(25%, 50%);
+    transform: translate(25%, 50%);
   }
 
   .menu-icon {
@@ -181,9 +125,7 @@ background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
     position: absolute;
     top: 0;
     right: 0;
-    -webkit-transform: translate(-100%, 60%);
-        -ms-transform: translate(-100%, 60%);
-            transform: translate(-100%, 60%);
+    transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
   }
@@ -205,16 +147,12 @@ background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
     color: #fff;
     padding: 14px 20px;
     border: 1px solid #fff;
-    -webkit-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
   }
 
   .nav-links-mobile:hover {
     background: #fff;
     color: #242424;
-    -webkit-transition: 250ms;
-    -o-transition: 250ms;
     transition: 250ms;
   }
 }
