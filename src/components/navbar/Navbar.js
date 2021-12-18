@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from './Button';
+import { Button } from '../button/Button';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import '../navbar/Navbar.css';
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  const [navbar, setNavbar] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -24,13 +25,21 @@ function Navbar() {
 
   window.addEventListener('resize', showButton);
 
+  const changeColorBackground = () => {
+    if(window.scrollY >= 80){
+      setNavbar(true)
+    }else{
+      setNavbar(false)
+    }
+  }
+  window.addEventListener('scroll', changeColorBackground)
   return (
     <>
-      <nav className='navbar'>
+      <nav className={navbar ? 'navbar active': 'navbar'}>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
             Upworker
-            <i class='fab fa-typo3' />
+            <i className='fab fa-typo3' />
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />

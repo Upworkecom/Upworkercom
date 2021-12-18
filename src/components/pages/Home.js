@@ -1,16 +1,17 @@
 import React from 'react';
 import '../../App.css';
-import Main from '../Main';
-import HeroSection from '../HeroSection';
-import Pricing from '../pricing';
-import Footer from '../Footer';
+import Main from '../main/Main';
+import HeroSection from '../Hero/HeroSection';
+import Footer from '../footer/Footer';
+import Navbar from '../navbar/Navbar';
+
 
 function Home() {
   return (
     <>
+      <Navbar />
       <HeroSection />
       <Main />
-      <Pricing />
       <Footer />
     </>
   );

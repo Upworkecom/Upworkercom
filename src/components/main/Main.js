@@ -3,9 +3,10 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
-import "../App.css";
+import "../main/Main.css";
 
 import { content } from "./content";
+import { Button } from "../button/Button";
 
 const transition = { duration: 0.5, ease: "easeInOut" };
 
@@ -29,7 +30,7 @@ const Post = ({ match }) => {
       variants={postVariants}
     >
       <div className="link-wrapper">
-        <Link to="/">Back to Home page</Link>
+        <Link  to="/">Back to Home page</Link>
       </div>
       <div className="post">
         <img className="post__img" src={imgSrc} alt={title} />
@@ -54,7 +55,10 @@ const PostPreview = ({ id, title, description, imgSrc }) => {
       <div className="post-preview__text">
         <h2 className="heading">{title}</h2>
         <p>{description}</p>
-        <Link to={`/post/${id}`}>Learn more</Link>
+        <Link to={`/post/${id}`} >
+          discover
+        </Link>
+        
       </div>
     </motion.div>
   );
