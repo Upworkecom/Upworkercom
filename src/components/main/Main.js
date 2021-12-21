@@ -2,11 +2,18 @@ import React from "react";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import {ImCross} from 'react-icons/im'
+import {FaGlobe} from 'react-icons/fa'
+import {RiMoneyDollarBoxLine} from 'react-icons/ri'
 
 import "../main/Main.css";
+import Svg1 from '../images/svg1.svg'
+import Amazon from "../../pages/Amazon";
+
 
 import { content } from "./content";
 import { Button } from "../button/Button";
+
 
 const transition = { duration: 0.5, ease: "easeInOut" };
 
@@ -19,7 +26,7 @@ const postVariants = {
 const Post = ({ match }) => {
   const id = Number(match.params.id);
 
-  const { title, description, text, imgSrc } = content[id];
+  const { title, description, feature, featureDescription, imgSrc } = content[id];
 
   return (
     <motion.div
@@ -29,14 +36,24 @@ const Post = ({ match }) => {
       exit="exit"
       variants={postVariants}
     >
-      <div className="link-wrapper">
-        <Link  to="/">Back to Home page</Link>
-      </div>
       <div className="post">
-        <img className="post__img" src={imgSrc} alt={title} />
-        <h1 className="heading">{title}</h1>
-        <p>{description}</p>
-        <p>{text}</p>
+        <div className='content'>
+        <div className="link-wrapper">
+        <Link  to="/"><ImCross size='30px' color="#292929" /></Link>
+      </div>
+          <img className="svg" src={Svg1} alt="/"></img> 
+          <h1 className="heading">{title}</h1>
+          <p className="desciption">{description}</p>
+          <div className="feature">
+            <FaGlobe size='40px'color="#fff" className="icons" />
+              <h2 className="feature-title">{feature}</h2>
+                <p className="featureDescription">{featureDescription}</p>       
+          </div>
+            <Link to='/amazon'>
+                <Button className='button'>Scrape Amazon</Button>
+              </Link>
+        </div>
+          <img className="post__img" src={imgSrc} alt={title} />
       </div>
     </motion.div>
   );
@@ -87,7 +104,7 @@ const Blog = () => {
   );
 };
 
-export default function App() {
+export default function Main() {
   return (
     <Router>
       <Route
@@ -102,4 +119,4 @@ export default function App() {
       />
     </Router>
   );
-}
+        }
