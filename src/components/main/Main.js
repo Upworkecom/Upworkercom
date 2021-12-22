@@ -26,7 +26,7 @@ const postVariants = {
 const Post = ({ match }) => {
   const id = Number(match.params.id);
 
-  const { title, description, feature, featureDescription, imgSrc } = content[id];
+  const { title,className, description, feature, featureDescription, imgSrc } = content[id];
 
   return (
     <motion.div
@@ -65,18 +65,14 @@ const postPreviewVariants = {
   exit: { x: "-100%", opacity: 0, transition }
 };
 
-const PostPreview = ({ id, title, description, imgSrc }) => {
+const PostPreview = ({ id, title, description, imgSrc,icons, className }) => {
   return (
-    <motion.div className="post-preview" variants={postPreviewVariants}>
-      <img className="post-preview__img" src={imgSrc} alt={title} />
-      <div className="post-preview__text">
-        <h2 className="heading">{title}</h2>
-        <p>{description}</p>
-        <Link to={`/post/${id}`} >
-          discover
-        </Link>
-        
-      </div>
+    <motion.div className={className} variants={postPreviewVariants}>   
+      <Link to={`/post/${id}`} >
+        <img className="post-preview__img" src={imgSrc} alt={title} />
+      </Link>
+       
+      
     </motion.div>
   );
 };
@@ -89,6 +85,7 @@ const blogVariants = {
 const Blog = () => {
   return (
     <div className="page">
+      <h1 className="title">Discover our Scrappers</h1>
       <motion.div
         className="blog-list"
         initial="initial"
