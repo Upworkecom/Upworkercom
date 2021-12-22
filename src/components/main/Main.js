@@ -4,13 +4,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import {ImCross} from 'react-icons/im'
 import {FaGlobe} from 'react-icons/fa'
-import {RiMoneyDollarBoxLine} from 'react-icons/ri'
-
 import "../main/Main.css";
 import Svg1 from '../images/svg1.svg'
-import Amazon from "../../pages/Amazon";
-
-
 import { content } from "./content";
 import { Button } from "../button/Button";
 
@@ -25,9 +20,7 @@ const postVariants = {
 
 const Post = ({ match }) => {
   const id = Number(match.params.id);
-
-  const { title,className, description, feature, featureDescription, imgSrc } = content[id];
-
+  const { title, description, subTitle, subDescription, imgSrc } = content[id];
   return (
     <motion.div
       className="page"
@@ -46,8 +39,8 @@ const Post = ({ match }) => {
           <p className="desciption">{description}</p>
           <div className="feature">
             <FaGlobe size='40px'color="#fff" className="icons" />
-              <h2 className="feature-title">{feature}</h2>
-                <p className="featureDescription">{featureDescription}</p>       
+              <h2 className="subTitle">{subTitle}</h2>
+                <p className="subDescription">{subDescription}</p>       
           </div>
             <Link to='/amazon'>
                 <Button className='button'>Scrape Amazon</Button>
@@ -70,9 +63,7 @@ const PostPreview = ({ id, title, description, imgSrc,icons, className }) => {
     <motion.div className={className} variants={postPreviewVariants}>   
       <Link to={`/post/${id}`} >
         <img className="post-preview__img" src={imgSrc} alt={title} />
-      </Link>
-       
-      
+      </Link>      
     </motion.div>
   );
 };
@@ -116,4 +107,4 @@ export default function Main() {
       />
     </Router>
   );
-        }
+}
