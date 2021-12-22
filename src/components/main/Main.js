@@ -37,7 +37,7 @@ const Post = ({ match }) => {
           <img className="svg" src={Svg1} alt="/"></img> 
           <h1 className="heading">{title}</h1>
           <p className="desciption">{description}</p>
-          <div className="feature">
+          <div className="sub">
             <FaGlobe size='40px'color="#fff" className="icons" />
               <h2 className="subTitle">{subTitle}</h2>
                 <p className="subDescription">{subDescription}</p>       
