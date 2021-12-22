@@ -1,4 +1,3 @@
-import {AiFillAmazonSquare} from 'react-icons/ai'
 export const content = [
     {
       id: 0,
