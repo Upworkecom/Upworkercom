@@ -5,6 +5,7 @@ import HeroSection from '../components/Hero/HeroSection';
 import Footer from '../components/footer/Footer';
 import Navbar from '../components/navbar/Navbar';
 import Feature from '../components/Feature/Feature';
+import Pricing from '../components/pricing/Pricing';
 
 
 function Home() {
@@ -14,6 +15,7 @@ function Home() {
       <HeroSection />
       <Feature />
       <Main />
+      <Pricing />
       <Footer />
     </>
   );

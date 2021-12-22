@@ -29,7 +29,7 @@
   
  
   .blog-list {
-    width: 100%;
+    width: 80%;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 20% 15px 20% 15px 50%;
@@ -200,12 +200,7 @@
   font-size: 1.5rem;
 }
 
-.feature1{
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 2fr 10%;
-  grid-template-columns: 2fr 10%;
-}
+
 
 .heading{
   font-family: 'Saira', sans-serif;
